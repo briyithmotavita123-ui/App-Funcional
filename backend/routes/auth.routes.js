@@ -1,0 +1,15 @@
+// backend/routes/auth.routes.js
+import express from "express";
+import { register, login } from "../controllers/auth.controller.js";
+
+const router = express.Router();
+
+/**
+ * Rutas de autenticación:
+ * POST /api/auth/register
+ * POST /api/auth/login
+ */
+router.post("/register", register);
+router.post("/login", login);
+
+export default router;
