@@ -1,0 +1,25 @@
+/* src/index.css */
+
+body {
+    margin: 0;
+    font-family: 'Brush Script MT', cursive, Arial, sans-serif;
+    background-color: #FDFEFE; /* Fondo blanco muy suave */
+}
+
+/* Estilos de tabla generales para la lista de empleados */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: left;
+    border: none;
+}
+
+/* Para aplicar el borde redondeado a las filas en la lista */
+tbody tr {
+    display: table-row;
+}

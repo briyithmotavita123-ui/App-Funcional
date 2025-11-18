@@ -1,0 +1,118 @@
+/* frontend/src/App.css */
+
+/* ====================================
+   1. VARIABLES DE COLOR (Paleta Pastel)
+   ==================================== */
+:root {
+    --color-fondo-principal: #F3F3FF; /* Lavanda muy claro */
+    --color-fondo-tarjeta: #FFFFFF;    /* Blanco puro para contraste */
+    --color-acento-rosa: #F472B6;      /* Rosa pastel fuerte (Acento) */
+    --color-acento-morado: #A78BFA;    /* Morado pastel (Secundario) */
+    --color-texto-oscuro: #374151;     /* Gris oscuro para buen contraste */
+    --color-sombra-suave: rgba(244, 114, 182, 0.2); /* Sombra rosada suave */
+    --radio-redondeado: 1.25rem;       /* Bordes muy redondeados */
+}
+
+/* ====================================
+   2. ESTILOS BASE Y TIPOGRAFÍA
+   ==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Fondo pastel claro */
+    background-color: var(--color-fondo-principal); 
+    /* Tipografía legible (no cursiva) */
+    font-family: 'Noto Sans', sans-serif; 
+    /* Texto oscuro para buen contraste */
+    color: var(--color-texto-oscuro); 
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Regla de animación para el loader (manteniendo la que ya tenías) */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Contenido principal con espacio */
+.main-content-kawaii {
+    /* Ajusta min-height según tu diseño final de navbar/footer */
+    min-height: calc(100vh - 80px); 
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ====================================
+   3. ELEMENTOS DE UI (Tarjetas, Botones, Inputs)
+   ==================================== */
+
+.card-kawaii {
+    background-color: var(--color-fondo-tarjeta);
+    padding: 2rem;
+    border-radius: var(--radio-redondeado);
+    box-shadow: 0 10px 15px -3px var(--color-sombra-suave), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Doble sombra suave */
+    transition: transform 0.3s ease;
+}
+
+.card-kawaii:hover {
+    transform: translateY(-5px); /* Efecto de "levantamiento" suave */
+}
+
+/* Botones Principales (Pastel Rosa) */
+.btn-pastel-rosa {
+    background-color: var(--color-acento-rosa);
+    color: white; /* Texto blanco en este color oscuro es legible */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem; /* Bordes redondeados */
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-pastel-rosa:hover {
+    background-color: #EC4899; /* Un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--color-sombra-suave);
+}
+
+/* Campos de entrada de texto */
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #FBCFE8; /* Borde rosa muy claro */
+    border-radius: 0.75rem;
+    background-color: #FFF7FA; /* Fondo de campo ligeramente rosado */
+    color: var(--color-texto-oscuro);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-acento-rosa);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.3); /* Anillo de foco suave */
+}
+
+/* Estilos para enlaces (a) */
+a {
+    color: var(--color-acento-morado);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #8B5CF6; /* Un morado más intenso al pasar el ratón */
+    text-decoration: underline;
+}
